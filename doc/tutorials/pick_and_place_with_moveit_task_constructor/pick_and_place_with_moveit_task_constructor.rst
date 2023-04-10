@@ -78,7 +78,9 @@ Also, add the dependencies to ``CMakeLists.txt``. The file should look similar t
 
     install(TARGETS mtc_tutorial
     DESTINATION lib/${PROJECT_NAME})
-
+    install(DIRECTORY launch
+    DESTINATION share/${PROJECT_NAME}
+    )
     if(BUILD_TESTING)
     find_package(ament_lint_auto REQUIRED)
     # the following line skips the linter which checks for copyrights
